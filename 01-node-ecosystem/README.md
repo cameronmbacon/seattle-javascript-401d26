@@ -12,8 +12,8 @@
 
 ## Resources
 * Read [just another guide to ES6]
-* Read [a gentle intro to tdd in js] (Stop reading once you get to the `a worked example` section)
-* Read [YDKJS: What is Scope?](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch1.md) (Read until the 'Compiler Speak' section)
+* Read [a gentle intro to tdd in js] (Stop reading once you get to the **a worked example** section)
+* Read [YDKJS: What is Scope?](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch1.md) (Read until the **Compiler Speak** section)
 * Skim [about nodejs]
 * Skim [getting started with nodeJS on travisCI]
 
@@ -25,6 +25,9 @@ Writing code is difficult enough, don't allow your problem to be finding code on
 
 ### File Naming Tips
 Name all of your files using kabob-case ("-" separated words). Don't use uppercase letters, unless you want the file to appear first when you run `ls`. In git projects, it is standard to capitalize **README.md** for this reason.
+
+### package.json
+The `package.json` file is used to describe and configure a NodeJS package. The only two fields that are required by a package.json are `name` and `version` but we often use `npm init` or `npm init -y` to automate the creation of this file. If a package has external dependencies, they are listed by name and version under the fields `dependencies` and `devDependencies`. If the package depends on an external package to run, the external package should be listed under `dependencies`. If the external package is only needed in development (like a testing framework), it should be listed under `devDependencies`. `package.json` files can have a `scripts` field where keys can be associated with unix commands. This gives us the ability to create custom automation scripts.  NPM scripts have the added benefit that they can run any command line utility (CLI) defined in a dependency, without globally installing the CLI on you operating system.
 
 ### NodeJS
 NodeJS is an open source framework for writing Javascript on your operating system. It is compromised of the **V8** Javascript runtime and the **NodeAPIs**. V8 supports many features in the latest version of Javascript, called ES6 (or ES2015), which has added many new syntax features and optimizations. **V8** is the Javascript runtime developed for the Chrome browser and is written in C and C++. The Node APIs are written in C, C++, and Javascript. Node was developed to enable developers to easily write code with asynchronous input and output (I/O). In many other languages, asynchronous I/O creates a lot of work for developers and can be error prone. NodeJS uses an event loop driven and non-blocking architecture - this enables NodeJS to have very low overhead when it is not running.
