@@ -12,9 +12,8 @@
 
 ## Resources
 * Read [just another guide to ES6]
-* Read [a gentle intro to tdd in js] (Stop reading once you get to the **a worked example** section)
-* Read [YDKJS: What is Scope?](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch1.md) (Read until the **Compiler Speak** section)
-* Skim [about nodejs]
+* Read [a gentle intro to tdd in js] (Stop reading once you get to the **'a worked example'** section)
+* Read [YDKJS: What is Scope?](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch1.md)
 * Skim [getting started with nodeJS on travisCI]
 
 ## Outline
