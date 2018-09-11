@@ -10,7 +10,7 @@
 ## Resources
 * Read [YDKJS: Lexical Scope](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch2.md) (Feel free to skip the **'Cheating Lexical'** section)
 * Read [YDKJS: Asynchrony: Now & Later ](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md) (Stop reading once you get to the **'Parallel Threading'** section)
-* Grooking Algorithms: Big O Notation (Page 10 to 19)
+* Grooking Algorithms: Big O Notation (Page 5 to 19)
 * Skim [MDN: try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 * Skim [about package.json]
 * Skim [npm scripts docs]
