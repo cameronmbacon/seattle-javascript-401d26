@@ -6,6 +6,11 @@
 * Students will be able create and implement common linked list methods
 
 ## Resources
+## Resources
+* Read Finish [YDKJS: Function vs Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md)
+* Read Grooking Algorithms: Pages 26 to 36 (Linked Lists)
+* Skim [node buffer api docs]
+* Skim [bitmap file format]
 
 ## Outline
 ![linked-list](https://s3-us-west-2.amazonaws.com/slugbyte-assets/linked-list.svg)

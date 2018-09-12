@@ -7,6 +7,8 @@
 * Students will be able to use EventEmitters to manage asynchronous code
 
 ## Resources
+* Read [YDKJS: Function vs Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md) (Read until 'Blocks as Scopes' section)
+* Read Grooking Algorithms: Chapter 2 - Selection Sort
 * Skim [node buffer api docs]
 * Skim [bitmap file format]
 
