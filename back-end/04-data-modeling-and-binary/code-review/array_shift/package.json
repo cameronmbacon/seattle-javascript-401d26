@@ -1,0 +1,24 @@
+{
+  "name": "array_shift",
+  "version": "1.0.0",
+  "description": "array_shift.js is a clean and reusable module for taking a single numeric value and placing it in the center of an array of numbers.",
+  "main": "./src/lib/array_shift.js",
+  "scripts": {
+    "test": "eslint . && jest --coverage",
+    "justJest": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.22.0",
+    "jest": "^23.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgwest/coding-challenges.git"
+  }
+}
