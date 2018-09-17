@@ -7,6 +7,8 @@
 
 ## Resources
 * Read [YDKJS: Promises](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md)(Read until Error Handling)
+* Read [Introduction to REST : Part 1](https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-1-introduction-b4a072f8740f)
+* Read [Introduction to REST : Part 2](https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-2-rest-constraints-129a4b69a582)
 
 
 ## Outline
