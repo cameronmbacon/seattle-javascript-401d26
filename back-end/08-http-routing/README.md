@@ -6,8 +6,8 @@
 * Students will learn to build RESTful HTTP servers
 
 ## Resources
-* Read [getting started with promises](https://developers.google.com/web/fundamentals/getting-started/primers/promises)
-* Watch [promises](https://www.youtube.com/watch?v=2d7s3spWAzo)
+* Read [YDKJS: Promises](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md)(Read until Error Handling)
+
 
 ## Outline
 

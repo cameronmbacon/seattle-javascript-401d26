@@ -10,7 +10,7 @@
 
 * Skim [net module docs](https://nodejs.org/api/net.html)
 * Skim [events api docs](https://nodejs.org/api/events.html)
-* **Windows users only**: Please watch [this video](https://www.youtube.com/watch?v=WkSOHBrdeB8&index=21&list=PLVngfM2hsbi_DnO3_JQSgt0Wvipc5Edl5&t=0s) to install a tool called Putty that you will need to prepare for Lab 6.
+* Read [YDKJS: Promises](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md)(Read until Promise Trust)
 
 ## Outline
 

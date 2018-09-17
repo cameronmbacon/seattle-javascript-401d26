@@ -6,6 +6,8 @@
 * Students will be able to create HTTP servers for handling HTTP requests
 
 ## Resources
+* Read [YDKJS: Promises](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md)(Read until Chain Flow)
+* Read/Skim [Introduction to HTTP](http://www.ntu.edu.sg/home/ehchua/programming/webprogramming/http_basics.html)
 * Skim [nodejs http module](https://nodejs.org/api/http.html)
 * Skim [wiki list of header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields)
 * Skim [wiki list of status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
@@ -31,11 +33,11 @@ A HTTP/1.1 request is formatted in text and transferred using TCP. The first lin
 | TRACE 	| No	      | Yes	| Yes | Yes	| No | Echos retrieved request |
 | PATCH  	| Yes	      | Yes	| No	| No	| No | Partial modification of resource |
 
-`Safe` methods should only be used for information retrieval and should not change the server state.  
-`Idempotent` methods means if two identical requests are made they should get an identical response.  
-`Cacheable` means the client should be able to cache the response.  
+`Safe` methods should only be used for information retrieval and should not change the server state.
+`Idempotent` methods means if two identical requests are made they should get an identical response.
+`Cacheable` means the client should be able to cache the response.
 
-##### Example HTTP Request  
+##### Example HTTP Request
 ```
 POST /api/note HTTP/1.1
 Host: api.example.com

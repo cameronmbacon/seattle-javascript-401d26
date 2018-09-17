@@ -1,5 +1,5 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Stacks and Queues
-===
+![cf](http://i.imgur.com/7v5ASc8.png) Stacks, Queues and Recursion
+================================================================
 
 # Learning Objectives
 * Students will be able to implement a stack
@@ -8,9 +8,7 @@
 * Students will be able to identify use cases for a queue
 
 ## Resources
-* Watch [stacks and queues](https://www.youtube.com/watch?v=wjI1WNcIntg)
-* Read [stack wiki](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
-* Skim [queue wiki](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
+* Read Grooking Algorithms Chapter 3 (Recursion)
 
 ## Outline
 
