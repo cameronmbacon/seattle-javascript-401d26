@@ -1,8 +1,8 @@
 'use strict';
 
-const logger = require('./logger');
 const url = require('url');
 const queryString = require('querystring');
+const logger = require('./logger');
 
 const requestParser = module.exports = {};
 
@@ -49,4 +49,3 @@ requestParser.parseAsync = (request) => {
     return undefined;
   });
 };
-

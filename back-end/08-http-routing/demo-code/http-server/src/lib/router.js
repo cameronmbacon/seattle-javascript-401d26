@@ -10,36 +10,39 @@ const routeHandlers = {
   DELETE: {},
 };
 
-const router = module.export = {};
+const router = module.exports = {};
 
-const logRouteAndCallback = (method, route, callback) => {
+const logRouteAndCallback = (method, route) => {
   logger.log(logger.INFO, `Adding a ${method} handler on the '${route}' route`);
-  logger.log(logger.INFO, callback.toString());
+  // logger.log(logger.INFO, callback.toString());
 };
 //-------------------------------------------------------------------------------
 // These functions are to add new routes
 //-------------------------------------------------------------------------------
 router.get = (route, callback) => {
   routeHandlers.GET[route] = callback;
-  logRouteAndCallback('GET', route, callback);
+  logRouteAndCallback('GET', route);
 };
+
 router.put = (route, callback) => {
   routeHandlers.PUT[route] = callback;
-  logRouteAndCallback('PUT', route, callback);
+  logRouteAndCallback('PUT', route);
 };
+
 router.post = (route, callback) => {
   routeHandlers.POST[route] = callback;
-  logRouteAndCallback('POST', route, callback);
+  logRouteAndCallback('POST', route);
 };
+
 router.delete = (route, callback) => {
   routeHandlers.DELETE[route] = callback;
-  logRouteAndCallback('DELETE', route, callback);
+  logRouteAndCallback('DELETE', route);
 };
 //-------------------------------------------------------------------------------
 // This function is going to find and execute callbacks, and it's going to be
 // tied to the listen function in the server.
 //-------------------------------------------------------------------------------
-router.route = (request, response) => {
+router.findAndExecuteRoutes = (request, response) => {
   //! Algo
   // Find a handler (if we have one);
   // if handler is found
@@ -54,8 +57,8 @@ router.route = (request, response) => {
       logger.log(logger.INFO, handler.toString());
 
       if (handler) {
-        //! Vinicio - in this if statement, I can assume that handler contains a function
         return handler(parsedRequest, response);
+        //! Vinicio - in this if statement, I can assume that handler contains a function
       }
       response.writeHead(404);
       response.end();
@@ -64,7 +67,6 @@ router.route = (request, response) => {
       logger.log(logger.INFO, 'Responding back with 400 status code');
       response.writeHead(400, { 'Content-Type': 'text/plain' });
       response.write('Bad Request');
-
       response.end();
       return undefined;
     });
