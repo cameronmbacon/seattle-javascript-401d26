@@ -2,5 +2,5 @@
 
 const server = require('./lib/server');
 
-server.start(3000);
+server.start(3002);
 

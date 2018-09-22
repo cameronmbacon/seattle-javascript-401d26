@@ -54,7 +54,7 @@ router.findAndExecuteRoutes = (request, response) => {
     .then((parsedRequest) => {
       const handler = routeHandlers[parsedRequest.method][parsedRequest.url.pathname];
       logger.log(logger.INFO, 'Found the following handler');
-      logger.log(logger.INFO, handler.toString());
+//      logger.log(logger.INFO, handler.toString());
 
       if (handler) {
         return handler(parsedRequest, response);
