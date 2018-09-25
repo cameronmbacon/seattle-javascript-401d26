@@ -2,6 +2,8 @@
 
 const express = require('express');
 const logger = require('./logger');
+const loggerMiddleware = require('./logger-middleware');
+const errorMiddleware = require('./error-middleware');
 
 const noteRoutes = require('../routes/note-router');
 
@@ -10,12 +12,16 @@ const app = express();
 //-------------------------------------------------------------------------------------------------
 // ROUTES
 //-------------------------------------------------------------------------------------------------
+app.use(loggerMiddleware);
+
 app.use(noteRoutes);
 
 app.all('*', (request, response) => {
   logger.log(logger.INFO, 'Returning a 404 from catch-all/default route (the route was not found');
   return response.sendStatus(404);
 });
+
+app.use(errorMiddleware);
 //-------------------------------------------------------------------------------------------------
 const server = module.exports = {};
 let internalServer = null;

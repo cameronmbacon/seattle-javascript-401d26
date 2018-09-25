@@ -67,4 +67,53 @@ describe('/api/notes', () => {
         expect(getResponse.body.title).toEqual(originalRequest.title);
       });
   });
+
+  test('should respond with 204 if we remove a note', () => {
+    const originalRequest = {
+      title: faker.lorem.words(5),
+      content: faker.lorem.words(5),
+    };
+    return superagent.post(API_URL)
+      .set('Content-Type', 'application/json')
+      .send(originalRequest)
+      .then((postResponse) => {
+        originalRequest.id = postResponse.body.id;
+        return superagent.delete(`${API_URL}/${postResponse.body.id}`);
+      })
+      .then((getResponse) => {
+        expect(getResponse.status).toEqual(204);
+      });
+  });
+
+  test('should respond with 404 if there is no note to remove', () => {
+    return superagent.delete(`${API_URL}/invalidID-gregor-is-cute`)
+      .then(Promise.reject)
+      .catch((getResponse) => {
+        expect(getResponse.status).toEqual(404);
+      });
+  });
+
+  test('should respond with 204 if we updated a note', () => {
+    const originalRequest = {
+      title: faker.lorem.words(5),
+      content: faker.lorem.words(5),
+    };
+    return superagent.post(API_URL)
+      .set('Content-Type', 'application/json')
+      .send(originalRequest)
+      .then((postResponse) => {
+        originalRequest.id = postResponse.body.id;
+        return superagent.put(`${API_URL}/${postResponse.body.id}`)
+          .send({
+            title: 'GREGOR IS CUTE',
+          });
+      })
+      .then((putResponse) => {
+        expect(putResponse.status).toEqual(200);
+        expect(putResponse.body.id).toEqual(originalRequest.id);
+
+        expect(putResponse.body.title).toEqual('GREGOR IS CUTE');
+        expect(putResponse.body.content).toEqual(originalRequest.content);
+      });
+  });
 });
