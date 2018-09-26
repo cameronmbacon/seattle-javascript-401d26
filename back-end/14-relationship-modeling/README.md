@@ -6,7 +6,8 @@
 * Students will be able to create "one to one", "one to many", and "many to many" model relationships
 
 ## Resources
-* Read [mongoose populate docs](http://mongoosejs.com/docs/populate.html)
+* Read [MongoDB vs SQL](https://medium.com/xplenty-blog/the-sql-vs-nosql-difference-mysql-vs-mongodb-32c9980e67b2)
+* Skim [mongoose populate docs](http://mongoosejs.com/docs/populate.html)
 * Skim [mongoose api docs](http://mongoosejs.com/docs/api.html)
 
 ## Outline
