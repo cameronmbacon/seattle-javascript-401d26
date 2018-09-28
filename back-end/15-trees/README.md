@@ -14,7 +14,7 @@ Trees are a widely used data structure that simulate a hierarchical "tree" struc
   * **parent:** - a node that links down to other nodes (is the root of a sub-tree)
   * **child:** - a node that's a direct sub-tree of another node
   * **siblings:** - a group of nodes with the same parent
-  * **leaf:** - a node with node children
+  * **leaf:** - a node with no children
   * **edge:** - a connection (link) between nodes
   * **height:** - the distance (# of edges) from the root of a tree or sub-tree to the furthest leaf
     * Leaves will always have a height of zero
