@@ -6,7 +6,10 @@
 * Students will be able to implement Access Controls in their HTTP server routes
 
 ## Resources
-* Read [intro to jwt](https://jwt.io/introduction/)
+* Skim [intro to jwt](https://jwt.io/introduction/)
+* Read [YDKJS: Hoisting](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch4.md)
+
+
 
 ## Outline
 

@@ -7,7 +7,7 @@
 * Students will be able to implement a Basic Authorization parser
 
 ## Resources
-* Read [basic auth](https://en.wikipedia.org/wiki/Basic_access_authentication)
+* Read [YDKJS: Promise Recap and Limitations](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md)
 
 ## Outline
 
