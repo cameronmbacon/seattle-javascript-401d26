@@ -10,7 +10,6 @@
 * Skim [express api docs](http://expressjs.com/en/4x/api.html)
 * Skim [express routing](http://expressjs.com/en/guide/routing.html)
 * Skim [babel api docs](https://babeljs.io/docs/usage/api/)
-* Read [es6 features](https://babeljs.io/learn-es2015/)
 
 
 ## Outline
