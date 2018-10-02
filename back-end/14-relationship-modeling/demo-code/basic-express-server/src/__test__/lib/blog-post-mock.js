@@ -12,17 +12,17 @@ blogPostMock.pCreateBlogPostMock = () => {
 
   return categoryMock.pCreateCategoryMock()
     .then((createdCategoryMock) => {
-      resultMock.category = createdCategoryMock;
+      resultMock.category = createdCategoryMock; //! Vinicio - we add to the mock here
 
       return new BlogPost({
         title: faker.lorem.words(5),
         content: faker.lorem.words(5),
         category: createdCategoryMock._id,
-      }).save();
+      }).save(); //! Vinicio - this line bypasses the POST request
     })
     .then((createdBlogPostMock) => {
       resultMock.blogPost = createdBlogPostMock;
-      return resultMock;
+      return resultMock; //! Vinicio - {category: {...}, blogPost:{...}}
     });
 };
 

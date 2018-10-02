@@ -1,0 +1,42 @@
+Steps verified on - May 11 2018
+
+ - install babel-cli (Dev dependency)
+ - install stage-0 (Dev dependency)
+ - ignore the build folder in estlintrc
+ - Test your live server using : `echo '{"username":"gregor","password":"gregor","email":"gregor@gregor.com"}' | http POST http://localhost:3000/signup`
+
+- go to github.com and make a new repo
+- add a .gitignore to your repo
+- add remote to local repo
+`git remote add origin <URL>`
+- make sure you *NEVER* publish your amazon keys
+- set up travis
+- push into your repo
+- configure travis in github
+- Repeat the following steps for `Staging` and `Master`
+- Project Weeks Only
+  - Protect with Travis both MASTER and STAGING branches
+  - Enable `Require pull request reviews before merging`
+  - Enable `Require review from Code Owners`
+- Heroku Deployment
+  - Go to heroku an create a new app
+  - Connect your github repo to Heroku
+  - Enable `Wait for CI to pass before deploy` on Heroku
+  - Enable Automatic Deploys
+  - Click `Settings`
+  - Populate all ENV variables
+    - Ignore `PORT`, heroku will setup that for us
+    - Ignore `MONGODB_URI`
+    - Remember to use a *SECURE* secret.
+      - Random
+      - Long
+  - Go to resources
+    - Search for `Mlab` on the `Add-ons` search box
+      - Click provision to install your mongodb instance
+  - Manually Deploy
+    - Go to the `Deploy` tab
+    - At the very end, we have a `Deploy Branch` button
+  - Before assuming our code is live, we'll check the logs
+    - Check that we are using the right settings
+    - A successfully deployed app will display `State changed from starting to up`
+  - Ignore the 404 on your main route

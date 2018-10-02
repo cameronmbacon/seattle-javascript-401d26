@@ -6,11 +6,15 @@
   "directories": {
     "lib": "lib"
   },
+	"engines" : {
+		"node": "10.8.0"
+	},
   "scripts": {
     "test": "eslint . && jest --coverage",
     "lint": "eslint .",
     "dbOn": "mkdir -p ./db && mongod --dbpath ./db",
-    "dbOff": "killall mongod"
+    "dbOff": "killall mongod",
+		"start": "node src/index.js"
   },
   "jest": {
     "setupFiles": [
