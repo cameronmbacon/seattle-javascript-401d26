@@ -23,20 +23,19 @@ const six = new Node(6);
 const seven = new Node(7);
 const eight = new Node(8);
 const nine = new Node(9);
+const ten = new Node(10);
 
-const tree = new BinaryTree(one);
+const tree = new BinaryTree(ten);
 
-one.left = two;
-one.right = three;
+ten.left = nine;
+ten.right = eight;
 
-three.left = four;
-three.right = five;
+nine.left = seven;
 
-two.left = six;
-six.right = seven;
+eight.left = six;
 
-seven.left = eight;
-seven.right = nine;
+six.left = five;
+six.right = four;
 
 const preOrderTraversal = (root) => {
   if (!root) {
