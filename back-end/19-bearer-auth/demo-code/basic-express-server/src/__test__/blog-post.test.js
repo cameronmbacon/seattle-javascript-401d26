@@ -28,16 +28,4 @@ describe('/api/categories', () => {
         expect(response.body.category.toString()).toEqual(savedMock.category._id.toString());
       });
   });
-
-  test('should respond with 200 status and an updated card when deletion', () => {
-    let savedMock;
-    return blogPostMock.pCreateBlogPostMock()
-      .then((mock) => {
-        savedMock = mock;
-        return superagent.delete(`${API_URL}/${mock.blogPost._id}`);
-      }) //! Vinicio - this mock object has two things: a category and a blog post
-      .then((response) => {
-        expect(response.status).toEqual(200);
-      });
-  });
 });

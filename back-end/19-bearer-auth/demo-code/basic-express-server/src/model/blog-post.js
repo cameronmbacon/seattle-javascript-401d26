@@ -46,7 +46,7 @@ function blogPostPreHook(done) {
   // .catch(done);//! Vinicio - done with one argument means an error
 }
 
-function blogPostPostHook(document, done){
+const blogPostPostHook = (document, done) => {
   return Category.findById(document.category)
     .then((categoryFound) => {
       if (!categoryFound) {
@@ -62,8 +62,8 @@ function blogPostPostHook(document, done){
     .catch(error => done(error)); // .catch(done);
 };
 
-blogPostSchema.post('remove', blogPostPostHook);
 blogPostSchema.pre('save', blogPostPreHook);
+blogPostSchema.post('remove', blogPostPostHook);
 // -------------------------------------------------------------------------------------
 
 module.exports = mongoose.model('blog-post', blogPostSchema);

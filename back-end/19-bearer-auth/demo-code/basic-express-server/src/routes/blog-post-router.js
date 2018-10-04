@@ -35,21 +35,3 @@ router.put('/api/blog-posts/:id', jsonParser, (request, response, next) => {
     })
     .catch(error => next(error));
 });
-
-router.delete('/api/blog-posts/:id', jsonParser, (request, response, next) => {
-	// BlogPost.findByIdAndRemove won't trigger any hooks
-  return BlogPost.findById(request.params.id)
-    .then((post) => {
-      if (!post) {
-        logger.log(logger.INFO, 'Responding with a 404 status code');
-        return next(new HttpError(404, 'could not find blog post to update'));
-      }
-			//! Vinicio - this .remove will actually trigger the hook
-      return post.remove();
-    })
-    .then(() => {
-      return response.sendStatus(204);
-    })
-    .catch(error => next(error));
-});
-
