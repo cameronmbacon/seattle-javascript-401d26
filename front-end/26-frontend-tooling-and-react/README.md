@@ -9,11 +9,11 @@
 * Students will be able to update React component state
 
 ## Resources
-* Read [webpack concepts](https://webpack.js.org/concepts/)
+* Skim [webpack concepts](https://webpack.js.org/concepts/)
 * Skim [webpack configuration](https://webpack.js.org/configuration/)
-* Read [react hello world](https://facebook.github.io/react/docs/hello-world.html) 
-* Read [introducing JSX](https://facebook.github.io/react/docs/introducing-jsx.html)
-* Read [rendering elements](https://facebook.github.io/react/docs/rendering-elements.html)
+* Skim [react hello world](https://facebook.github.io/react/docs/hello-world.html) 
+* Skim [introducing JSX](https://facebook.github.io/react/docs/introducing-jsx.html)
+* Skim [rendering elements](https://facebook.github.io/react/docs/rendering-elements.html)
 
 ## Outline
 
