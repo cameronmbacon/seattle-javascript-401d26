@@ -7,10 +7,10 @@
 * Students will learn to pass data from parent to child through props
 
 ## Readings
-* Read [components and props](https://facebook.github.io/react/docs/components-and-props.html)
-* Read [state and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
-* Read [handling events](https://facebook.github.io/react/docs/handling-events.html)
-* Read [forms](https://facebook.github.io/react/docs/forms.html)
+* Skim [components and props](https://facebook.github.io/react/docs/components-and-props.html)
+* Skim [state and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
+* Skim [handling events](https://facebook.github.io/react/docs/handling-events.html)
+* Skim [forms](https://facebook.github.io/react/docs/forms.html)
 
 ## Outline
 
