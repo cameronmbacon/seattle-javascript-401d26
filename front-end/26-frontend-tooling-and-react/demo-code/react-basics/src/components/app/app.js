@@ -38,6 +38,13 @@ class App extends React.Component {
     //! Vinicio code here will run immediately
   };
 
+  handleCounterChange = (e) => {
+    const value =e.target.value;
+    this.setState(() => ({
+      counter: value,
+    }));
+  };
+
   //! React components NEED to have one render function in every compontent
   render() {
     return (
@@ -55,6 +62,7 @@ class App extends React.Component {
         <p> The value of the counter is: { this.state.counter }</p>
         <button onClick={this.handleCounterIncrement}> Increment Counter </button>
         <button onClick={this.handleCounterDecrement}> Decrement Counter </button>
+        <input onChange={this.handleCounterChange} value={this.state.counter}/>
       </div>
     ); //! Vinicio - every return function will return JSX
   }
