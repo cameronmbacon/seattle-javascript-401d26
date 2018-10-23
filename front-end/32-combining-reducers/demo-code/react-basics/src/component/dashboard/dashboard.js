@@ -23,8 +23,9 @@ Dashboard.propTypes = {
 
 const mapStateToProps = (state) => {
   //! Vinicio - Here, state comes from the store
+  // {sections: ..., cards : ...}
   return { // This return over here, will become Dashboard.props
-    sections: state,
+    sections: state.sections,
   };
 };
 const mapDispatchToProps = (dispatch) => {
