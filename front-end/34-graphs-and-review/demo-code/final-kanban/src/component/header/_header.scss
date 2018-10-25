@@ -1,0 +1,16 @@
+@import '../../styles/vars';
+
+.navbar {
+  padding-left: $gap;
+  padding-top: $gap;
+  padding-bottom: $gap;
+  display: flex;
+  justify-content: center;
+  &.app {
+    background-color: $appbar-bg-color;
+    font-size: 1.5rem;
+  }
+  &.board {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../styles/vars';
+
+.lists {
+  display: flex;
+  overflow-x: auto;
+  > * {
+    flex: 0 0 auto; // 'rigid' lists
+    margin-left: $gap;
+  }
+  &::after {
+    content: '';
+    flex: 0 0 $gap;
+  }
+}

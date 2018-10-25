@@ -1,0 +1,8 @@
+@import '../../styles/vars';
+
+.ui {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: $appbar-height $navbar-height 1fr;
+  color: #eee;
+}

@@ -1,0 +1,65 @@
+@import '../../styles/vars';
+
+.list {
+  width: $list-width;
+  height: calc(100% - #{$gap} - #{$scrollbar-thickness});
+
+  > * {
+    background-color: $list-bg-color;
+    color: #333;
+
+    padding: 0 $gap;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    float: right;
+  }
+
+  header {
+    line-height: $list-header-height;
+    font-size: 16px;
+    font-weight: bold;
+    border-top-left-radius: $list-border-radius;
+    border-top-right-radius: $list-border-radius;
+  }
+
+  footer {
+    line-height: $list-footer-height;
+    border-bottom-left-radius: $list-border-radius;
+    border-bottom-right-radius: $list-border-radius;
+    color: #888;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+
+    max-height: calc(100% - #{$list-header-height} - #{$list-footer-height});
+    overflow-y: auto;
+
+    li {
+      background-color: #fff;
+      padding: $gap;
+      &:not(:last-child) {
+        margin-bottom: $gap;
+      }
+
+      border-radius: $card-border-radius;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+      img {
+        display: block;
+        width: calc(100% + 2 * #{$gap});
+        margin: -$gap 0 $gap (-$gap);
+        border-top-left-radius: $card-border-radius;
+        border-top-right-radius: $card-border-radius;
+      }
+    }
+  }
+}
