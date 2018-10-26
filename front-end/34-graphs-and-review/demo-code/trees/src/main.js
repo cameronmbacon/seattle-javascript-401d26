@@ -1,5 +1,7 @@
 'use strict';
 
+const dfs = require('./dfs');
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -40,3 +42,35 @@ class Graph {
     return [...this._adjacencyList.get(node)];
   }
 }
+
+
+const graph = new Graph();
+
+const ten = new Node(10);
+const two = new Node(2);
+const six = new Node(6);
+const seven = new Node(7);
+const three = new Node(3);
+const eight = new Node(8);
+
+graph.addNode(ten);
+graph.addNode(two);
+graph.addNode(six);
+graph.addNode(seven);
+graph.addNode(three)
+graph.addNode(eight);
+
+graph.addDirectedEdge(ten, two);
+graph.addDirectedEdge(ten, six);
+graph.addDirectedEdge(ten, three);
+// graph.addDirectedEdge(ten, seven);
+graph.addDirectedEdge(two, seven);
+graph.addDirectedEdge(six, seven);
+graph.addDirectedEdge(six, eight);
+graph.addDirectedEdge(three, eight);
+graph.addDirectedEdge(eight, seven);
+
+
+const path = dfs(graph, ten, seven);
+
+console.log(path);
