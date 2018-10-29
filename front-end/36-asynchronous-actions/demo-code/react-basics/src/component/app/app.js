@@ -12,6 +12,7 @@ class App extends React.Component {
       <div>
         <BrowserRouter>
           <div>
+            <Route path='*' component={AuthRedirect}/>
             <Route exact path='/' component={Landing}/>
             <Route exact path='/signup' component={Landing}/>
             <Route exact path='/login' component={Landing}/>
