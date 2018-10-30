@@ -31,4 +31,12 @@ export const signupRequest = user => (store) => {
     });
 };
 
-// export const loginRequest = user => store => { };
+export const loginRequest = user => (store) => {
+  return superagent.get(`${API_URL}${routes.LOGIN_BACKEND}`) // eslint-disable-line
+    .auth(user.username, user.password)
+    .withCredentials() //! Vinicio - get cookies
+    .then((response) => { //! 3
+      //! Vinicio - set is a SYNC action, therefore; it connects and updates the store
+      return store.dispatch(set(response.text)); // !4
+    });
+};

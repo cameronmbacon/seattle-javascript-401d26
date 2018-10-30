@@ -4,7 +4,7 @@ class Dashboard extends React.Component {
   render() {
     console.log('Dashboard');
     return (
-      <p> Dashboard </p>
+      <p> You can only see this IF you are logged in : <strong>Gregor is Cute</strong> </p>
     );
   }
 }

@@ -4,9 +4,9 @@ const Stack = require('stack-lifo');
 
 module.exports = (graph, startNode, goalNode) => {
   //-----------------------------------------------
-  const stack = new Stack(); // Vinicio - change this for a QUEUE for next week's challenge
+  const stack = new Stack(); //! Vinicio - change this for a QUEUE for next week's challenge
   const visitedNodes = new Set();
-  const parentPath = new Map();
+  const parentPath = new Map(); //! Vinicio - this holds the final path at the end
   //-----------------------------------------------
   stack.push(startNode);
   visitedNodes.add(startNode);
@@ -27,12 +27,14 @@ module.exports = (graph, startNode, goalNode) => {
 
       if (visitedNodes.has(neighborNode)) {
         //! Vinicio - stop, go to the next neighbor
+        //! Vinicio - this line is avoiding loops
         continue; // eslint-disable-line
       } else {
         visitedNodes.add(neighborNode);
       }
       parentPath.set(neighborNode, currentNode);
-      stack.push(neighborNode);
+
+      stack.push(neighborNode); // O(1)
     }
   }
   //! Vinicio - if I get to this line...I didn't find a path

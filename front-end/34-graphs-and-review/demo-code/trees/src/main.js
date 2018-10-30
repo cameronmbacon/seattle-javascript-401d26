@@ -2,15 +2,17 @@
 
 const dfs = require('./dfs');
 
-class Node {
+class Vertex {
   constructor(value) {
     this.value = value;
   }
 }
 
 class Edge {
-  constructor(node, weight) {
-    this.node = node;
+  constructor(vertex, weight) {
+    this.vertex = vertex;
+    // this.startNode = vertex;
+    // this.endNode = vertex;
     this.weight = weight;
   }
 }
@@ -21,44 +23,44 @@ class Graph {
     this._adjacencyList = new Map();
   }
 
-  addNode(node) {
-    this._adjacencyList.set(node, []);
+  addVertex(vertex) {
+    this._adjacencyList.set(vertex, []);
   }
 
-  addDirectedEdge(startNode, endNode, weight = 0) {
-    if (!this._adjacencyList.has(startNode) || !this._adjacencyList.has(endNode)) {
+  addDirectedEdge(startVertex, endVertex, weight = 0) {
+    if (!this._adjacencyList.has(startVertex) || !this._adjacencyList.has(endVertex)) {
       throw new Error('__ERROR__ Invalid Nodes');
     }
 
-    const adjacencies = this._adjacencyList.get(startNode);
-    adjacencies.push(new Edge(endNode, weight));
+    const adjacencies = this._adjacencyList.get(startVertex);
+    adjacencies.push(new Edge(endVertex, weight));
   }
 
-  getNeighbors(node) {
-    if (!this._adjacencyList.has(node)) {
-      throw new Error('__ERROR__ Invalid Nodes');
+  getNeighbors(vertex) {
+    if (!this._adjacencyList.has(vertex)) {
+      throw new Error('__ERROR__ Invalid Vertex');
     }
 
-    return [...this._adjacencyList.get(node)];
+    return [...this._adjacencyList.get(vertex)];
   }
 }
 
 
 const graph = new Graph();
 
-const ten = new Node(10);
-const two = new Node(2);
-const six = new Node(6);
-const seven = new Node(7);
-const three = new Node(3);
-const eight = new Node(8);
+const ten = new Vertex(10);
+const two = new Vertex(2);
+const six = new Vertex(6);
+const seven = new Vertex(7);
+const three = new Vertex(3);
+const eight = new Vertex(8);
 
-graph.addNode(ten);
-graph.addNode(two);
-graph.addNode(six);
-graph.addNode(seven);
-graph.addNode(three)
-graph.addNode(eight);
+graph.addVertex(ten);
+graph.addVertex(two);
+graph.addVertex(six);
+graph.addVertex(seven);
+graph.addVertex(three)
+graph.addVertex(eight);
 
 graph.addDirectedEdge(ten, two);
 graph.addDirectedEdge(ten, six);
