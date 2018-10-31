@@ -1,5 +1,12 @@
 'use strict';
 
+class Node(){
+  constructor() {
+    this.left = null;
+    this.right = null;
+  }
+}
+
 class BinarySearchTree {
   constructor(root = null) {
     this.root = root;
@@ -35,25 +42,25 @@ class BinarySearchTree {
 
 
   // Time : O(H) -> O(lg n)
-  // Space : O(H) -> O(lg n)
-  find(value) {
+  // Space : O(1) (Because we don't use recursion
+  find(value) { //! Vinicio - this is what we know as 'binary search'
     if (!this.root) {
       return null;
     }
-    this.steps = 0;
-    return this._find(this.root, value);
-  }
 
-  _find(rootNode, value) {
-    this.steps += 1;
-    if (!rootNode) {
-      return null;
-    } else if (rootNode.value === value) {
-      return rootNode;
-    } else if (rootNode.value < value) {
-      return this._find(rootNode.right, value);
+    let currentNode = this.root;
+    while (currentNode) {
+      if (currentNode.value === value) {
+        return currentNode;
+      }
+      if (currentNode.value < value) {
+        currentNode = currentNode.right;
+      } else {
+        currentNode = currentNode.left;
+      }
     }
-    return this._find(rootNode.left, value);
+    //! Vinicio - here I know that I couldn't find my value
+    return null;
   }
 }
 
