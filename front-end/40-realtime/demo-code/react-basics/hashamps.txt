@@ -1,0 +1,58 @@
+Pros of Linked Lists
+- Dynamic memory (i.e. easy to insert values at head)
+
+Cons of Linked Lists
+- O(n) lookup time
+
+Pros of Arrays
+- O(1) lookup time
+
+Cons of Arrays
+- Fixed Size
+- Memory needs to be consecutive
+
+Hashmap
+- Introducing the concept of key,value pair
+  - the values are what we are trying to store
+	- we use the key to be aid the storage process
+- behind the scenes, a hashmap contains an ARRAY
+- Hashing Process
+  - start with the key
+	- we transform the key into a number
+	- we transfrom the number into an array index 
+	- innerArray[hashFunction(key)] = value;
+
+Pros
+ - O(1) lookup, insertion AND removal time (single values)
+
+Cons
+- Re-sizing the map is VERY expensive
+- there is no guaranteed order in the map
+- A hashmap sacrifices space for time
+
+
+
+
+
+
+ - An object (in JS) is a hashmap that only allows strings as keys.
+ - An ES6 map is a hashmap that allows anything as keys.
+ - An ES6 set is a hashmap where every value is (by default) true.
+
+
+
+ - look for something (an individual element)
+ - keep track of something
+ - count something
+
+
+
+
+
+
+
+
+
+
+
+
