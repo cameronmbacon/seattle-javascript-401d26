@@ -21,9 +21,9 @@ realTimeServer.on('connection', socket => {
   console.log('__CONNECTION__', socket.id);
 
   socket.on('SEND_MESSAGE', data => {
-    socket.emit('RECEIVE_MESSAGE', 'You have sent a message! Congratulations');
+    socket.emit('RECEIVE_MESSAGE', 'You have sent a message! Congratulations'); //1
 
-    realTimeServer.emit('RECEIVE_MESSAGE', {
+    realTimeServer.emit('RECEIVE_MESSAGE', { //2
       ...data,
       id: uuid(),
       timestamp: new Date(),
